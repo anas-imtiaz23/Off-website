@@ -35,17 +35,22 @@ router.post('/enroll', async (req, res) => {
     res.status(400).json({ message: 'Enrollment failed', error: error.message });
   }
 });
-router.post("/signup", async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
-    const { name, email, password } = req.body; // <-- Ensure this works
+      const { name, email, password } = req.body;
 
-    if (!name || !email || !password) {
-      return res.status(400).json({ msg: "All fields are required" });
-    }
+      // Hash password before saving
+      const hashedPassword = await bcrypt.hash(password, 10);
 
-    res.status(201).json({ msg: "User registered successfully!" });
+      // Create user
+      const newUser = new User({ name, email, password: hashedPassword });
+
+      // Save user to database
+      await newUser.save();
+
+      res.status(201).json({ msg: "User registered successfully!" });
   } catch (error) {
-    res.status(500).json({ msg: "Server error" });
+      res.status(500).json({ msg: "Error registering user", error: error.message });
   }
 });
 router.post("/login", async (req, res) => {

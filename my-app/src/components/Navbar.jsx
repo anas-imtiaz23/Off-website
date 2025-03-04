@@ -1,60 +1,3 @@
-// import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-// import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-// import React, { useState } from "react";
-
-// function Navbar() {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   return (
-//     <nav className="w-full bg-orange-600 text-white h-20 px-8 flex justify-between items-center shadow-lg z-40">
-//       {/* Social Media Links */}
-//       <div className="flex space-x-4">
-//         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-//           <FaFacebook className="text-2xl hover:text-gray-400" />
-//         </a>
-//         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-//           <FaInstagram className="text-2xl hover:text-gray-400" />
-//         </a>
-//         <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-//           <FaLinkedin className="text-2xl hover:text-gray-400" />
-//         </a>
-//         <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-//           <FaYoutube className="text-2xl hover:text-gray-400" />
-//         </a>
-//       </div>
-
-//       {/* Hamburger Menu for Mobile */}
-//       <div className="md:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-//         {isOpen ? <AiOutlineClose className="text-3xl" /> : <AiOutlineMenu className="text-3xl" />}
-//       </div>
-
-//       {/* Navigation Links (Hidden on Mobile, Flex on Medium+) */}
-//       <div className="hidden md:flex space-x-8 text-lg">
-//         <a href="/" className="hover:text-gray-400">Home</a>
-//         <a href="/review" className="hover:text-gray-400">Reviews</a>
-//         <a href="/about" className="hover:text-gray-400">About Us</a>
-//         <a href="/service" className="hover:text-gray-400">Services</a>
-//         <a href="/login" className="hover:text-gray-400">Login</a>
-//         <a href="/singup" className="hover:text-gray-400">Sign Up</a>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       {isOpen && (
-//         <div className="absolute top-20 left-0 w-full bg-orange-600 text-white flex flex-col items-center space-y-6 py-6 md:hidden z-50">
-//           <a href="/" className="hover:text-gray-400">Home</a>
-//           <a href="/review" className="hover:text-gray-400">Reviews</a>
-//           <a href="/about" className="hover:text-gray-400">About Us</a>
-//           <a href="/service" className="hover:text-gray-400">Services</a>
-//           <a href="/login" className="hover:text-gray-400">Login</a>
-//           <a href="/singup" className="hover:text-gray-400">Sign Up</a>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// }
-
-// export { Navbar };
-// export default Navbar;
 import React, { useState, useEffect } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -82,16 +25,16 @@ function Navbar() {
     <nav className="w-full bg-orange-600 text-white h-20 px-8 flex justify-between items-center shadow-lg z-40 relative">
       {/* Social Media Links */}
       <div className="flex space-x-4">
-        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/nexlabcti" target="_blank" rel="noopener noreferrer">
           <FaFacebook className="text-2xl hover:text-gray-400" />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/nexlabcti/" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="text-2xl hover:text-gray-400" />
         </a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/nexlab-cti-956637338/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="text-2xl hover:text-gray-400" />
         </a>
-        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://youtube.com/@nexlab-n3b?si=8Fl9rDJogW4vaRBo" target="_blank" rel="noopener noreferrer">
           <FaYoutube className="text-2xl hover:text-gray-400" />
         </a>
       </div>
@@ -117,7 +60,7 @@ function Navbar() {
         ) : (
           <>
             <a href="/login" className="hover:text-gray-400">Login</a>
-            <a href="/singup" className="hover:text-gray-400">Sign Up</a>
+            <a href="/signup" className="hover:text-gray-400">Sign Up</a>
           </>
         )}
       </div>
@@ -139,7 +82,7 @@ function Navbar() {
           ) : (
             <>
               <a href="/login" className="hover:text-gray-400">Login</a>
-              <a href="/singup" className="hover:text-gray-400">Sign Up</a>
+              <a href="/signup" className="hover:text-gray-400">Sign Up</a>
             </>
           )}
         </div>
@@ -149,3 +92,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

@@ -24,11 +24,8 @@ import Services from "./components/Services";
 import Footer from "./components/footer";
 import AboutUs from "./components/About";
 import Login from "./components/Login";
-import Signup from "./components/Singup";
-// import Footer from "./components/footer";
-// import Navbar from "./components/Navbar";
+import Signup from "./components/Signup";
 
-// import EnrollForm from "./components/EnrollForm";
 
 function App() {
   return (
@@ -46,7 +43,8 @@ function App() {
         <Route path="/footer" element={<Footer />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/singup" element={<Signup />} />
+        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/singup" element={<Signup />} /> */}
         {/* <Route path="/enroll" element={<EnrollForm />} /> */}
       </Routes>
       <Footer />
